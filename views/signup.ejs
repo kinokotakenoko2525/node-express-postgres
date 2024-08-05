@@ -9,19 +9,31 @@
 <%- include('./header'); %>
 <%- include('./error_messages'); %>
 <div class="container">
-  <form action="/signup" method="post">
-    <label>ユーザ名</label>
-    <input required type="text" name="username"/>
-    <br>
-    <label>パスワード</label>
-    <input required type="password" name="password"/>
-    <br>
-    <label>パスワード再入力</label>
-    <input required type="text" name="repassword"/>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Sign in"/>
-  </form>
-</div>
+        <form action="/signup" method="post">
+      
+              <label>お名前(必須)：</label><br>
+              <input type="text" name="first-name" maxlength="20" value="" placeholder="20文字以内で入力"><br>
+              <label>年齢：</label><br>
+              <input type="number" name="age" value=""><br>
+              <label>生年月日：</label><br>
+              <input type="date" name="birthday" value=""><br>
+              <label>メールアドレス：</label><br>
+              <input type="email" name="email-address" value="" placeholder="xxxx@example.com"><br>
+              <label>志望動機：</label><br>
+              <textarea name="message-body" placeholder="志望動機を入力"></textarea><br><br>
+      
+          <label>ユーザ名：</label><br>
+          <input required type="text" name="username"/>
+          <br>
+          <label>パスワード：</label><br>
+          <input required type="password" name="password"/>
+          <br>
+          <label>パスワード再入力：</label><br>
+          <input required type="text" name="repassword"/>
+          <br><br><br>
+          <input class="btn btn-primary" type="submit" value="Sign in"/>
+        </form>
+      </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
